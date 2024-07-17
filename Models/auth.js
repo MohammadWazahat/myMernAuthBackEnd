@@ -2,6 +2,10 @@ const mongoose = require("mongoose");
 
 //Crating schema
 const userSchema = new mongoose.Schema({
+  fullName : {
+    type: String,
+    required: true,
+  },
   username: {
     type: String,
     required: true,
@@ -9,10 +13,6 @@ const userSchema = new mongoose.Schema({
   password: {
     type: String,
     required: true,
-  },
-  gender: {
-    type: String,
-    required: false,
   },
   email: {
     type: String,
