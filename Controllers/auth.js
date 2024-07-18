@@ -10,7 +10,7 @@ const handleSignUp = async (req, res) => {
       fullName: body.fullName,
       username: body.username,
       password: body.password,
-         email: body.email,
+      email: body.email,
     });
 
     // creating payload
@@ -64,13 +64,13 @@ const handleLogIn = async (req, res) => {
 };
 
 // Get or Read all users
-const handleGetAllUsers = async (req, res) => {
+const handleGetAuthUsers = async (req, res) => {
   const user = await Auth.find({});
   res.json(user);
 };
 
 module.exports = {
   handleSignUp,
-  handleGetAllUsers,
+  handleGetAuthUsers,
   handleLogIn,
 };

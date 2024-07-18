@@ -1,8 +1,8 @@
 const express = require("express");
 const app = express();
 const { connectMongoDb} = require ("./Connection/connection");
-const routes = require("./Routers/user");
-const authRoutes = require("./Routers/auth");
+// const routes = require("./Routers/user");
+const authRoutes = require("./Routers/auth"); // Authentication routes
 const path = require ("path");
 const cors = require ("cors");
 require('dotenv').config();
@@ -30,7 +30,7 @@ app.use(cookieParser());
 app.use(authRoutes);
 
 //Middleware to render all the routes
-app.use(routes);
+// app.use(routes);
 
 
 app.listen(port, () => {

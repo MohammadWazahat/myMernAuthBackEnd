@@ -21,6 +21,9 @@ const myAuthMiddle = (req, res, next) => {
   }
 };
 
+
+
+// Authentication using cookies
 const myAuthTest = (req, res, next) => {
   // console.log("i m test middleware");
   // console.log(req.cookies?.tk);
